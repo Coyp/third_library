@@ -8,7 +8,6 @@
 
 # local time 
 
-local time to sys time maybe throw 2 errors 
 1. local_info::ambiguous
 
 ```c
@@ -25,6 +24,9 @@ Which outputs:
 
 ```c
 auto zt = make_zoned("America/New_York", local_days{Sunday[2]/March/2016} + 2h + 30min);
+or 
+auto zt = make_zoned("America/New_York", sys_days{March/13/2016} + 7h);
+zt.get_local_time();
 
 Which outputs:
 2016-03-13 02:30:00 is in a gap between
