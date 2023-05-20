@@ -8,6 +8,17 @@
 
 # local time 
 
+```c
+Class zoned : tp_(), zone_();
+
+tp_(zone_->to_sys(t)) -> throw 
+
+zone_->to_local(tp_) {
+   auto i = get_info(tp);
+   return LT{(tp + i.offset).time_since_epoch()};
+}
+``` 
+
 1. local_info::ambiguous
 
 ```c
