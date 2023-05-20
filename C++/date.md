@@ -41,3 +41,14 @@ Which outputs:
 2016-03-13 03:00:00 EDT which are both equivalent to
 2016-03-13 07:00:00 UTC
 ```
+
+# google 
+
+2:31 -> 3:31 拨快一小时
+
+```
+
+{ "dateTime": "2023-3-12T01:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T03:30:00-03:00" }
+{ "dateTime": "2023-3-12T02:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T04:30:00-03:00" }
+{ "dateTime": "2023-3-12T06:31:00Z", "timeZone": "America/New_York" } -> { "dateTime": "2023-03-12T03:31:00-03:00" }
+```
