@@ -37,7 +37,8 @@ os << tp << " is in a gap between\n"
    << i.second.abbrev
    << " which are both equivalent to\n"
    << i.first.end << " UTC";
- 
+
+// google 
 { "dateTime": "2016-03-13T02:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2016-03-13T03:30:00-04:00" }
 ```
 
