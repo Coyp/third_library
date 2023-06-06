@@ -19,18 +19,7 @@ zone_->to_local(tp_) {
 }
 ``` 
 
-1. local_info::ambiguous
-
-```c
-auto zt = make_zoned("America/New_York", local_days{Sunday[1]/November/2016} + 1h + 30min);
-
-Which outputs:
-2016-11-06 01:30:00 is ambiguous.  It could be
-2016-11-06 01:30:00 EDT == 2016-11-06 05:30:00 UTC or
-2016-11-06 01:30:00 EST == 2016-11-06 06:30:00 UTC
-```
-
-2. local_info::nonexistent
+1. local_info::nonexistent
 
 ```c
 auto zt = make_zoned("America/New_York", local_days{Sunday[2]/March/2016} + 2h + 30min);
@@ -48,20 +37,20 @@ os << tp << " is in a gap between\n"
    << i.second.abbrev
    << " which are both equivalent to\n"
    << i.first.end << " UTC";
+ 
+{ "dateTime": "2016-03-13T02:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2016-03-13T03:30:00-04:00" }
 ```
 
-# google 
-
-local_info::ambiguous 
+2. local_info::ambiguous
 
 ```c
+auto zt = make_zoned("America/New_York", local_days{Sunday[1]/November/2016} + 1h + 30min);
+
+Which outputs:
+2016-11-06 01:30:00 is ambiguous.  It could be
+2016-11-06 01:30:00 EDT == 2016-11-06 05:30:00 UTC or
+2016-11-06 01:30:00 EST == 2016-11-06 06:30:00 UTC
+
+// google 
 { "dateTime": "2016-11-06T01:34:00", "timeZone": "America/New_York" } -> { "dateTime": "2016-11-06T01:34:00-04:00" }
-```
-
-
-local_info::nonexistent
-
-```
-
-{ "dateTime": "2023-3-12T01:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T01:30:00-05:00" }
 ```
