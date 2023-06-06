@@ -52,7 +52,14 @@ os << tp << " is in a gap between\n"
 
 # google 
 
-2:31 -> 3:31 拨快一小时
+local_info::ambiguous 1:31 -> 
+
+```c
+{ "dateTime": "2016-11-06T01:34:00", "timeZone": "America/New_York" } -> { "dateTime": "2016-11-06T01:34:00-04:00" }
+```
+
+
+local_info::nonexistent 2:31 -> 3:31 拨快一小时
 
 ```
 
