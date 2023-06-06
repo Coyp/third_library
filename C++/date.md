@@ -52,18 +52,16 @@ os << tp << " is in a gap between\n"
 
 # google 
 
-local_info::ambiguous 1:31 -> 
+local_info::ambiguous 
 
 ```c
 { "dateTime": "2016-11-06T01:34:00", "timeZone": "America/New_York" } -> { "dateTime": "2016-11-06T01:34:00-04:00" }
 ```
 
 
-local_info::nonexistent 2:31 -> 3:31 拨快一小时
+local_info::nonexistent
 
 ```
 
-{ "dateTime": "2023-3-12T01:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T03:30:00-03:00" }
-{ "dateTime": "2023-3-12T02:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T04:30:00-03:00" }
-{ "dateTime": "2023-3-12T06:31:00Z", "timeZone": "America/New_York" } -> { "dateTime": "2023-03-12T03:31:00-03:00" }
+{ "dateTime": "2023-3-12T01:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2023-03-12T01:30:00-05:00" }
 ```
