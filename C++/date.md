@@ -6,6 +6,8 @@
 1. 在3月第二个周日凌晨2AM（当地时间）开始，将时钟调到3点，拨快1小时，俗称“Spring Forward 1 Hour"  -> 2-3 不存在
 2. 在11月第一个周日凌晨2AM（当地时间）夏令时结束，要将时钟调到1点，拨慢1小时，俗称“Fall Back 1 Hour”  -> 1-2 重复
 
+查询: https://www.timeanddate.com/time/change/netherlands/amsterdam
+
 # local time 
 
 ```c
