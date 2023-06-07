@@ -58,6 +58,13 @@ Which outputs:
 2016-11-06 01:30:00 EDT == 2016-11-06 05:30:00 UTC or
 2016-11-06 01:30:00 EST == 2016-11-06 06:30:00 UTC
 
+std::ostringstream os;
+os << tp << " is ambiguous.  It could be\n"
+   << tp << ' ' << i.first.abbrev << " == "
+   << tp - i.first.offset << " UTC or\n"
+   << tp << ' ' << i.second.abbrev  << " == "
+   << tp - i.second.offset  << " UTC";
+
 // google 
 { "dateTime": "2016-11-06T01:34:00", "timeZone": "America/New_York" } -> { "dateTime": "2016-11-06T01:34:00-04:00" }
 ```
