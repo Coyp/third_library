@@ -38,6 +38,12 @@ os << tp << " is in a gap between\n"
    << " which are both equivalent to\n"
    << i.first.end << " UTC";
 
+local_seconds{info.first.begin.time_since_epoch()} + info.first.offset -> 2015-11-01 01:00:00
+local_seconds{info.first.end.time_since_epoch()} + info.first.offset -> 2016-03-13 02:00:00
+
+local_seconds{i.second.begin.time_since_epoch()} + i.second.offset -> 2016-03-13 03:00:00
+local_seconds{i.second.end.time_since_epoch()} + info.second.offset -> 2016-11-06 02:00:00
+
 // google 
 { "dateTime": "2016-03-13T02:30:00", "timeZone": "America/New_York" }  -> { "dateTime": "2016-03-13T03:30:00-04:00" }
 ```
